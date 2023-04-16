@@ -1,16 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms'
-
+import {MessagesService} from './messages.service'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PostComponent } from './components/post/post.component';
 import { TweetComponent } from './components/tweet/tweet.component';
-import { AboutComponent } from './components/about/about.component';
-import { BiografiaComponent } from './components/biografia/biografia.component';
 import { HomeComponent } from './pages/home/home.component';
-import { SobreComponent } from './pages/sobre/sobre.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
@@ -19,10 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     PostComponent,
     TweetComponent,
-    AboutComponent,
-    BiografiaComponent,
     HomeComponent,
-    SobreComponent,
     FooterComponent
 
   ],
@@ -31,7 +25,9 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    MessagesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
