@@ -1,4 +1,4 @@
-<div class=" w-[650px] bg-white rounded-lg shadow p-9 mb-8" >
+<div class=" w-84  bg-white rounded-lg shadow p-9 mb-8 md:w-11/12" >
 
   <div class="flex justify-center w-full" >
 
@@ -10,6 +10,7 @@
       bg-gray-300
       flex
       mt-4
+      p-4
       items-center
       justify-center
       rounded-full
@@ -20,16 +21,16 @@
     <div class="flex-2">
       <textarea [(ngModel)]="tweetMessage"
        (input)="changeTweet()"
-       [maxlength]="tweetMaxLength" class="mb-4 ml-3
-       bg-gray-300 w-[520px]
+       [maxlength]="tweetMaxLength" class="mb-6 ml-3
+       bg-gray-300
        focus:outline-none
        focus:shadow-outline
        border-tranparente
        rounded-lg
-       py-3
-       px-5
+       py-4
+       px-4
+       w-48 md:w-96
        flex
-       appearance-none
        font-ligth
        resize-none
        placeholder-gray-500"
@@ -42,7 +43,7 @@
       <div class="flex justify-end items-baseline" >
 
         <div class="
-         font-thin w-55 mr-2
+         font-thin mr-2
          text-gray-500" >
          <p>{{tweetRemain}}</p>
         </div>
@@ -56,7 +57,8 @@
             border shadow
             text-center
             border-tranparente
-            py-2 px-5
+            py-2 px-3
+
             rounded-lg
             text-white
             bg-blue-500
